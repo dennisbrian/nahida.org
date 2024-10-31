@@ -5,38 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instagram QR Code</title>
     <style>
+        /* Apply a full-screen background */
         body {
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
         }
-        .container {
+
+        /* Create a semi-transparent overlay */
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.6); /* Black with 60% opacity */
+            padding: 40px;
+            border-radius: 15px;
             text-align: center;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
-        img {
-            max-width: 300px;
+
+        /* Style the QR code image */
+        .overlay img {
+            max-width: 400px; /* Increased from 200px to 400px */
+            width: 100%;
+            height: auto;
             border-radius: 10px;
         }
-        p {
-            font-size: 1.2em;
-            margin-top: 10px;
+
+        /* Style the Instagram handle text */
+        .overlay p {
+            font-size: 1.4em;
+            margin-top: 15px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="overlay">
         <img src="qr-code.jpeg" alt="Instagram QR Code">
         <p>Follow me on Instagram: <strong>@dennisbrian</strong></p>
     </div>
 </body>
 </html>
-
